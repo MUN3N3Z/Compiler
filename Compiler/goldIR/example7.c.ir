@@ -1,0 +1,22 @@
+Printing the AST BEFORE OPTIMIZATION
+long foo (long arg1, long arg2) {
+	temp1 = (7 * 8);
+	temp2 = (6 + 3);
+	temp3 = (3 - 2);
+	temp4 = (4 / 2);
+	temp5 = (arg1 + temp4);
+	temp6 = (arg2 * temp5);
+	temp7 = (temp1 + temp6);
+	temp8 = (temp2 * temp7);
+	temp9 = (temp8 / temp3);
+	return temp9;
+}
+Printing the AST AFTER OPTIMIZATION
+long foo (long arg1, long arg2) {
+	temp5 = (arg1 + 2);
+	temp6 = (arg2 * temp5);
+	temp7 = (56 + temp6);
+	temp8 = (9 * temp7);
+	temp9 = (temp8 / 1);
+	return temp9;
+}

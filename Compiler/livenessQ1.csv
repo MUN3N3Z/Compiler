@@ -1,0 +1,9 @@
+BasicBlock,Use,Def,In_final_iteration,Out_final_iteration,Number_of_Unique_Registers
+1,0,i,a,ai,2
+2,i,0,ai,ai
+3,a,b,ia,ib
+4,i,0,ib,ib
+5,b,a,ib,ai
+6,b,a,ib,ai
+7,i,i,ai,ai
+8,a,0,a,0

@@ -1,0 +1,16 @@
+Printing the AST BEFORE OPTIMIZATION
+long foo (long arg1, long arg2) {
+	temp1 = (arg1 & arg2);
+	temp2 = (temp1 | 2);
+	temp3 = (temp2 ^ arg1);
+	temp4 = (temp3 << 2);
+	return temp4;
+}
+Printing the AST AFTER OPTIMIZATION
+long foo (long arg1, long arg2) {
+	temp1 = (arg1 & arg2);
+	temp2 = (temp1 | 2);
+	temp3 = (temp2 ^ arg1);
+	temp4 = (temp3 << 2);
+	return temp4;
+}

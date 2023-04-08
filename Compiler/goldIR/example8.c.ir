@@ -1,0 +1,21 @@
+Printing the AST BEFORE OPTIMIZATION
+long bar (long arg1) {
+	temp1 = (3 * 4);
+	temp2 = (arg1 + temp1);
+	temp3 = (temp2 * temp2);
+	return temp3;
+}
+long foo (long arg1, long arg2) {
+	temp1 = bar(arg1);
+	return temp1;
+}
+Printing the AST AFTER OPTIMIZATION
+long bar (long arg1) {
+	temp2 = (arg1 + 12);
+	temp3 = (temp2 * temp2);
+	return temp3;
+}
+long foo (long arg1, long arg2) {
+	temp1 = bar(arg1);
+	return temp1;
+}
